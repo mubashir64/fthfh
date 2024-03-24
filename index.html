@@ -5,19 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Video Playlist</title>
-
     <link rel="stylesheet" href="Videoplaylist.css">
-
     <script>
-        // JavaScript to disable right-click context menu
-        document.addEventListener('contextmenu', function (event) {
-            event.preventDefault();
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault(); // Disables the right-click menu
         });
+        
+        document.onkeydown = function(e) {
+            if (e.ctrlKey && 
+               (e.keyCode === 85 || e.keyCode === 83 || e.keyCode === 67 || e.keyCode === 74 || e.keyCode === 123)) {
+                return false; // Disables Ctrl+U, Ctrl+S, Ctrl+C, Ctrl+J, and F12
+            }
+            return true;
+        };
     </script>
-
 </head>
 <body>
-
     <div class="container">
         <div class="main-video-container">
             <video src="images/vid-9.mp4" loop controls class="main-video"></video>
@@ -25,8 +28,6 @@
         </div>
         <div class="video-list-container" id="videosList"></div>
     </div>
-
     <script src="Videoplaylist.js"></script>
-
 </body>
 </html>
