@@ -24,8 +24,8 @@ const videosList = [
 	title: 'Solo Leveling S01E06'
 },
 {
-	video: 'images/vid-6.mp4',
-	title: 'Comming_soon'
+	video: 'https://www.googleapis.com/drive/v3/files/19ox5KMzHNdB8DGbtmuHDiLnbrmeBZ3XN?alt=media&key=AIzaSyCfleZMSGBGdj75C-d_6kCbMXE21Ek6Od4',
+	title: 'Solo Leveling S01E07'
 },
 {
 	video: 'images/vid-7.mp4',
